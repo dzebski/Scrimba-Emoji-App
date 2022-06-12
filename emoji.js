@@ -1,17 +1,12 @@
-
 // *** Properties *** 
-
-const myEmojis = ['💩','🔫','🤡']
+const myEmojis = ['💩','🔫','🤡', '🎲', '🤔']
 const emojiContainer = document.getElementById('emojiContainer')
-
 const emojiInput = document.getElementById('emoji-input')
 
 // *** Renders *** 
-
 renderEmoji(myEmojis)
 
 // *** Methods *** 
-
 function renderEmoji(eArray) {
 
     emojiInput.value = ""
@@ -25,11 +20,8 @@ function renderEmoji(eArray) {
 }
 
 // *** Buttons *** 
-
 // Push Button
 document.getElementById('push-btn').addEventListener('click', function() {
-    console.log('Push:Clicked')
-
     if (emojiInput.value) {
         myEmojis.push(emojiInput.value)
         renderEmoji(myEmojis)
@@ -38,9 +30,7 @@ document.getElementById('push-btn').addEventListener('click', function() {
 })
 
 // Unshift Button
-document.getElementById('unshift-btn').addEventListener('click', function() {
-    console.log('Unshift:Clicked')
-    
+document.getElementById('unshift-btn').addEventListener('click', function() {    
     if (emojiInput.value) {
         myEmojis.unshift(emojiInput.value)
         renderEmoji(myEmojis)
@@ -50,16 +40,12 @@ document.getElementById('unshift-btn').addEventListener('click', function() {
 
 // Pop Button
 document.getElementById('pop-btn').addEventListener('click', function() {
-    console.log('Pop:Clicked')
-
     myEmojis.pop()
     renderEmoji(myEmojis)
 })
 
 // Shift Button
 document.getElementById('shift-btn').addEventListener('click', function() {
-    console.log('Shift:Clicked')
-
     myEmojis.shift()
     renderEmoji(myEmojis)
 })
